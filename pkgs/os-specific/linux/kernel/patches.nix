@@ -5,6 +5,14 @@
     { name = "bridge-stp-helper";
       patch = ./bridge-stp-helper.patch;
     };
+  nanopi_doc =
+    { name="dt-doc";
+      patch=./nanopi-r4s-patches/dt-bindings-Add-doc-for-FriendlyARM-NanoPi-R4S.patch;
+    };
+  nanopi_dt =
+    { name="dt-sup";
+      patch=./nanopi-r4s-patches/rockchip-rk3399-add-support-for-FriendlyARM-NanoPi-R4S.patch;
+    };
 
   request_key_helper =
     { name = "request-key-helper";

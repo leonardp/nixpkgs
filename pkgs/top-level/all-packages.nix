@@ -18519,6 +18519,7 @@ in
     ubootGuruplug
     ubootJetsonTK1
     ubootNovena
+    ubootNanopiR4S
     ubootOdroidC2
     ubootOdroidXU3
     ubootOrangePiPc

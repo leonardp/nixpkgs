@@ -173,6 +173,17 @@ in {
     '';
   };
 
+  ubootNanopiR4S = buildUBoot {
+    defconfig = "nanopi-r4s-rk3399_defconfig";
+    extraPatches = [ ./nanopi-r4s-initial.patch ];
+    extraMeta = {
+      platforms = [ "aarch64-linux" ];
+      #license = lib.licenses.unfreeRedistributableFirmware;
+    };
+    BL31 = "${armTrustedFirmwareRK3399}/bl31.elf";
+    filesToInstall = [ "spl/u-boot-spl.bin" "u-boot.itb" "idbloader.img"];
+  };
+
   ubootNovena = buildUBoot {
     defconfig = "novena_defconfig";
     extraMeta.platforms = ["armv7l-linux"];
